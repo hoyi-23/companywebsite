@@ -1,0 +1,253 @@
+//banner
+.banner{
+    background-image: url(/assets/images/banner.png);
+    height: 394px;
+    width: 100%;
+    @include zoomimage;
+    @include md{
+        height: 840px;
+    }
+}
+.banner__wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.banner__content{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(5%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .banner__text{
+        color: $dark;
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.875rem;
+        @include md{
+            font-size: 1.25rem;
+        }
+        @include lg{
+            font-size: 2.25rem;
+            line-height: 3.375rem;
+            font-weight: normal;
+        }
+    }
+    .banner__title{
+        color: $dark;
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2.8rem;
+        @include md{
+            font-size: 3rem;
+            line-height: 4.5rem;
+        }
+        @include lg{
+            font-size: 4rem;
+            line-height: 6rem;
+        }
+    }
+}
+
+//服務
+.service{
+    background: $secondary;
+    padding: 2rem 0rem 0.5rem 0rem;
+    @include md{
+        padding: 2.5rem 0rem 1.5rem 0rem;
+    }
+    @include lg{
+        padding: 3.75rem 0rem;
+    }
+}
+.service__title{
+    color: $dark;
+    font-size: 1.5rem;
+    line-height: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    @include md{
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+    }
+    @include lg{
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+}
+.service__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include md{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: start;
+    }
+}
+
+.service__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 2rem;
+    @include md{
+        width: 50%;
+    }
+    @include lg{
+        width: 25%;
+    }
+}
+
+.service__icon{
+    font-size: 100px;
+    color: $dark;
+}
+.service__item__title{
+    font-weight: bold;
+    color: $dark;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+.service__item__text{
+    line-height: 1.5rem;
+    @include md{
+        padding: 0rem 2.375rem;
+    }
+    @include lg{
+        padding: 0rem 0.9rem;
+    }
+}
+
+//經典系列眼鏡
+.classic-collection{
+    padding: 2rem 0rem;
+    @include md{
+        padding: 2.5rem 0rem;
+    }
+    @include lg{
+        padding: 3.75rem 0rem 5rem 0rem;
+    }
+}
+.classic-collection__title{
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: $dark;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    @include md{
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    @include lg{
+        font-size: 3rem;
+        line-height: 4.5rem;
+        margin-bottom: .5rem;
+    }
+}
+.classic-category{
+    margin-top: .5rem;
+    .classic-category__link{
+    display: flex;
+    position: relative;
+    };
+    @include lg{
+        margin-top: 2rem;
+    }
+}
+
+.classic-category__img{
+    height: 134px;
+    width: 100%;
+    @include zoomimage;
+    @include md{
+        width: 390px;
+        height: 168px;
+    }
+    @include lg{
+        width: 635px;
+        height: 320px;
+    }
+}
+
+.classic-category__content{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    @include md{
+        left: 60%;
+        transform: translateX(0%) translateY(-50%);
+    }
+}
+.classic__icon{
+   font-size: 2.5rem;
+   color: $primary;
+   @include lg{
+       font-size: 2.75rem;
+   }
+}
+.classic__title{
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: bold;
+    font-style: italic;
+    color: $primary;
+    padding-left: .5rem;
+    @include lg{
+        font-size: 3rem;
+        line-height: 4rem;
+        padding-left: 1.375rem;
+    }
+}
+.classic-category:nth-child(1){
+    .classic-category__img{
+        background-image: url(/assets/images/series-classic-1.png);
+    }
+}
+.classic-category:nth-child(2){
+    .classic-category__img{
+        background-image: url(/assets/images/series-classic-2.png);
+        background-position: center -100px;
+    }
+    .classic-category__link{
+        @include lg{
+            flex-direction: row-reverse;
+        }
+    }
+    .classic-category__content{
+        @include lg{
+            left: 5%;
+            transform: translateX(0%) translateY(-50%);
+        }
+    }
+}
+.classic-category:nth-child(3){
+    .classic-category__img{
+        background-image: url(/assets/images/series-classic-3.png);
+        background-position: center -80px;
+    }
+}
+
+.hover-zoom{
+    transition: transform 1s;
+ &:hover{
+    transform: scale(1.1);
+ }
+}
+
+//聯名設計鏡框
+.coDesign-collection{
+    background: #000;
+}

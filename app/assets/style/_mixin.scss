@@ -1,0 +1,68 @@
+//圖片取代文字 hide-text
+@mixin hide-text{
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+//zoomimage
+@mixin zoomimage{
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+//screen_size
+
+@mixin sm{
+    @media (min-width:576px) {
+        @content        
+    };
+};
+@mixin md{
+    @media (min-width:767px) {
+        @content        
+    };
+};
+@mixin lg{
+    @media (min-width:992px) {
+        @content        
+    };
+};
+@mixin xl{
+    @media (min-width:1140px) {
+        @content        
+    };
+};
+@mixin xxl{
+    @media (min-width:1320px) {
+        @content        
+    };
+};
+
+//grid(欄位/欄寬 px/gutter px)
+
+@mixin grid($columns,$col-width,$gutter) {
+	.column {
+		margin: 0 $gutter $gutter 0;
+		float: left;
+		@for $i from 1 through $columns {
+			.col#{$i} {
+				width: ($col-width * $i) + ($gutter * ($i - 1));
+			}
+		}
+	}
+}
+
+
+
+//spacing
+//...
+
+//font-size
+//...
+
+//theme-color
+//...

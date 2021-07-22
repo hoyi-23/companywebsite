@@ -1,0 +1,16 @@
+$primary: #AA0601;
+$secondary: #AA06010D;
+$dark: #650300;
+
+
+
+.container{
+    max-width: 345px;
+    margin: 0 auto;
+    @include md{
+        max-width: 690px;
+    }
+    @include lg{
+        max-width: 1110px;
+    }
+}
