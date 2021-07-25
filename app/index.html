@@ -1,5 +1,5 @@
 ---
-title: 首頁
+title: 看得清眼鏡
 layout: ./app/layout.ejs
 engine: ejs
 current: index
@@ -43,27 +43,27 @@ current: index
 <section class="classic-collection">
   <h2 class="classic-collection__title">經典系列鏡框</h2>
   <ul class="classic-collection__list container">
-    <li class="classic-category">
+    <li class="classic-category hover-zoom">
       <a href="#" class="classic-category__link">
-      <div class="classic-category__img hover-zoom"></div>
+      <div class="classic-category__img"></div>
       <div class="classic-category__content">
         <span class="material-icons-outlined classic__icon">auto_awesome</span>
         <h3 class="classic__title">OPTICAL</h3>
       </div>
     </a>
     </li>
-    <li class="classic-category">
+    <li class="classic-category hover-zoom">
       <a href="#" class="classic-category__link">
-      <div class="classic-category__img hover-zoom"></div>
+      <div class="classic-category__img"></div>
       <div class="classic-category__content">
         <span class="material-icons-outlined classic__icon">light_mode</span>
         <h3 class="classic__title">SUNGLASSES</h3>
       </div>
     </a>
     </li>
-    <li class="classic-category">
+    <li class="classic-category hover-zoom">
       <a href="#" class="classic-category__link">
-      <div class="classic-category__img hover-zoom"></div>
+      <div class="classic-category__img"></div>
       <div class="classic-category__content">
         <span class="material-icons-outlined classic__icon">flash_on</span>
         <h3 class="classic__title">FUNCTIONAL</h3>
@@ -77,59 +77,86 @@ current: index
   <h2 class="coDesign-collection__title">聯名設計鏡框</h2>
   <ul class="coDesign-collection__list container">
     <li class="coDesign-category">
-        <h3 class="title--primary">Double A+</h3>
-      </div>
+      <a href="#" class="coDesign__img">
+        <h3 class="coDesign__title">Double A+</h3>
+      </a>
     </li>
     <li class="coDesign-category">
-        <h3 class="title--primary">YOUTH</h3>
-      </div>
+      <a href="#" class="coDesign__img">
+        <h3 class="coDesign__title">YOUTH</h3>
+      </a>
     </li>
   </ul>
 </section>
 
 <section class="buyer-review">
-  <h2 class="title--title"></h2>
-  <article class="buyer-review__lilst">
+  <h2 class="buyer-review__title">顧客推薦</h2>
+  <article class="buyer-review__lilst container">
     <section class="buyer-review__single">
       <div class="buyer-review__content">
-        <img src="" alt="" class="buyer-photo">
-        <h3 class="buyer-name"></h3>
-        <p class="buyer-review__text"></p>
+        <img src="/assets/images/recommand-1.png" alt="Jessy 推薦" class="buyer-photo">
+        <h3 class="buyer-name">Jessy</h3>
+        <p class="buyer-review__text">眼鏡品質優良，下次還會想來這邊購買！</p>
       </div>
-      <p class="buyer-review__date"></p>
+      <p class="buyer-review__date">2021/06/20</p>
     </section>
     <section class="buyer-review__single">
       <div class="buyer-review__content">
-        <img src="" alt="" class="buyer-photo">
-        <h3 class="buyer-name"></h3>
-        <p class="buyer-review__text"></p>
+        <img src="/assets/images/recommand-2.png" alt="凱倫 推薦" class="buyer-photo">
+        <h3 class="buyer-name">凱倫</h3>
+        <p class="buyer-review__text">做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！</p>
       </div>
-      <p class="buyer-review__date"></p>
+      <p class="buyer-review__date">2021/04/18</p>
     </section>
     <section class="buyer-review__single">
       <div class="buyer-review__content">
-        <img src="" alt="" class="buyer-photo">
-        <h3 class="buyer-name"></h3>
-        <p class="buyer-review__text"></p>
+        <img src="/assets/images/recommand-3.png" alt="悠悠 推薦" class="buyer-photo">
+        <h3 class="buyer-name">悠悠</h3>
+        <p class="buyer-review__text">謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
       </div>
-      <p class="buyer-review__date"></p>
+      <p class="buyer-review__date">2020/12/25</p>
     </section>
     <section class="buyer-review__single">
       <div class="buyer-review__content">
-        <img src="" alt="" class="buyer-photo">
-        <h3 class="buyer-name"></h3>
-        <p class="buyer-review__text"></p>
+        <img src="/assets/images/recommand-4.png" alt="Kyuan 推薦" class="buyer-photo">
+        <h3 class="buyer-name">Kyuan</h3>
+        <p class="buyer-review__text">服務很好，品質沒有任何問題，非常喜歡。</p>
       </div>
-      <p class="buyer-review__date"></p>
+      <p class="buyer-review__date">2020/10/31</p>
     </section>
   </article>
 </section>
 
-<section class="contact-us">
-  <h2 class="title--black"></h2>
-  <p></p>
-  <form>
-
-  </form>
-  <div class="btn"></div>
+<section class="contact">
+  <h2 class="contact__title">聯絡我們</h2>
+  <div class="container-sm">
+    <p class="contact__text">我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
+    <form method="post">
+      <ul class="contact__form">
+        <li class="contact__form__input">
+          <label for="name">姓名</label>
+          <input type="text" name="name" id="name" required>
+        </li>
+        <li class="contact__form__input">
+          <label for="tel">連絡電話</label>
+          <input type="tel" name="tel" id="tel" required>
+        </li>
+        <li class="contact__form__input">
+          <label for="email">電子郵件</label>
+          <input type="email" name="email" id="email" required>
+        </li>
+        <li class="contact__form__input">
+          <label for="text">意見回饋</label>
+          <textarea name="text" id="text" rows="4" placeholder="請輸入您的意見"></textarea>
+        </li>
+        <li class="contact__form__input">
+          <input type="checkbox" id="policy-check" name="policy-check" value="agree" required>
+          <label for="policy-check">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
+        </li>
+        <li class="contact__form__input">
+          <button id="send" value="send">確定送出</button>
+        </li>
+      </ul>
+    </form>  
+  </div>  
 </section>

@@ -1,7 +1,8 @@
 $primary: #AA0601;
 $secondary: #AA06010D;
 $dark: #650300;
-
+$gray: #212529;
+$light-gray: #707070;
 
 
 .container{
@@ -13,4 +14,21 @@ $dark: #650300;
     @include lg{
         max-width: 1110px;
     }
+}
+.container-sm{
+    max-width: 345px;
+    margin: 0 auto;
+    @include md{
+        max-width: 450px;
+    };
+    @include lg{
+        max-width: 730px;
+    }
+}
+
+.hover-zoom{
+    transition: transform 1s;
+ &:hover{
+    transform: scale(1.1);
+ }
 }

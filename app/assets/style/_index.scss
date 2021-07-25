@@ -183,9 +183,7 @@
     position: absolute;
     display: flex;
     align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    @include transform-center;
     @include md{
         left: 60%;
         transform: translateX(0%) translateY(-50%);
@@ -240,14 +238,248 @@
     }
 }
 
-.hover-zoom{
-    transition: transform 1s;
- &:hover{
-    transform: scale(1.1);
- }
-}
+
 
 //聯名設計鏡框
 .coDesign-collection{
-    background: #000;
+    background-image: url(/assets/images/coDesign-bg.png);
+    @include zoomimage;
+    padding: 2rem 0rem;
+    @include md{
+        padding: 2.5rem 0rem;
+    }
+    @include lg{
+        padding: 3.75rem;
+    }
+}
+.coDesign-collection__title{
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: .75rem;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    @include md{
+        font-size: 2rem;
+        line-height: 2.75rem;
+        margin-bottom: 1rem;
+    }
+    @include lg{
+        font-size: 3rem;
+        line-height: 4.5rem;
+        margin-bottom: 1.25rem;
+    }
+}
+.coDesign-collection__list{
+    display: flex;
+    flex-direction: column;
+    @include md{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.coDesign-category{
+    position: relative;
+    margin: .5rem 0rem;
+    background-color: #fff;
+    @include md{
+        margin: 1rem 0rem;
+    }
+    @include lg{
+        margin: 1.25rem 0rem;
+    }
+}
+
+.coDesign__img:after{
+    content: "";
+    display: block;
+    filter: opacity(60%);
+    @include zoomimage;
+    width: 345px;
+    height: 291px;
+    @include md{
+        width: 330px;
+        height: 278px;
+    }
+    @include lg{
+        width: 540px;
+        height: 455px;
+    }
+    
+}
+.coDesign__img:hover:after{
+    filter: opacity(80%);
+}
+.coDesign-category:nth-child(1){
+    .coDesign__img:after{
+        background-image: url(/assets/images/series-co-design-1.png);
+    }
+}
+.coDesign-category:nth-child(2){
+    .coDesign__img:after{
+        background-image: url(/assets/images/series-co-design-2.png);
+    }
+}
+.coDesign__title{
+    z-index: 99;
+    @include transform-center;
+    position: absolute;
+    color: $primary;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 2rem;
+    @include lg{
+        font-size: 4.5rem;
+    }
+}
+
+//顧客推薦
+.buyer-review{
+    padding: 2rem 0rem;
+    @include md{
+        padding: 2.5rem 0rem;
+    }
+    @include lg{
+        padding: 3.75rem 0rem; 
+    }
+}
+.buyer-review__title{
+    text-align: center;
+    color: $dark;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    margin-bottom: 0.75rem;
+    @include md{
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 1rem;
+    }
+    @include lg{
+        font-size: 3rem;
+        line-height: 4.5rem;
+        margin-bottom: 1.25rem;
+    }
+}
+.buyer-review__lilst{
+    @include md{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.buyer-review__single{
+    border-radius: 2%;
+    box-shadow: 0px 2px 6px #DEE2E6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 460px;
+    margin: .5rem 0rem;
+    @include md{
+        width: 48%;
+        margin: 1rem 0rem;
+    }
+    @include lg{
+        width: 24%;
+        margin: 1.25rem 0rem;
+    }
+}
+.buyer-photo{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2% 2% 0% 0%;
+    height: 256px;
+}
+.buyer-name{
+    color: $gray;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 1rem 0rem .5rem 1.5rem;
+}
+.buyer-review__text{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0rem 1.5rem;
+}
+.buyer-review__date{
+    color: $light-gray;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0rem 1.5rem;
+    padding-bottom: 1rem;
+}
+
+//聯絡表單
+.contact{
+    background-color: $secondary;
+    padding: 1.875rem 0rem;
+    @include md{
+        padding: 2.5rem 0rem;
+    }
+    @include lg{
+        padding: 3.75rem 0rem;
+    }
+}
+.contact__title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    margin-bottom: 1.25rem;
+    @include md{
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    @include lg{
+        font-size: 3rem;
+        line-height: 4rem;;
+    }
+}
+.contact__form{
+    display: flex;
+    flex-direction: column;
+}
+.contact__text{
+    line-height: 1.5rem;
+    margin-bottom: 0.75rem;
+    @include md{
+        margin-bottom: 1rem;
+    }
+}
+.contact__form__input{
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem 0rem;
+    label{
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
+    input,textarea{
+        background-color: $secondary;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding: .5rem .75rem;
+        border: solid 1px #333;
+    }
+    button{
+        border: none;
+        width: 165px;
+        background-color: $primary;
+        color: #fff;
+        align-self: center;
+        margin-top: .75rem;
+        font-weight: bold;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding: .5rem 0rem;
+        @include md{
+            margin-top: 1.25rem;
+        }
+    }
+    &:nth-child(5){
+        flex-direction: row;
+    }
 }

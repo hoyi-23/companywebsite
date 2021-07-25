@@ -1,8 +1,11 @@
+
 //header
 .header{
     background-color: $primary;
     }
 .header-wrap{
+    position: sticky;
+    top: -1px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,22 +130,30 @@
     margin-top: 2rem;
 
     }
-    .contact__info{
+    .footer-contact__info{
         display: flex;
         .material-icons-outlined{
-            font-size: 1.125rem;
-            line-height: 1.875rem;
-            margin-right: 11px;
             color: #fff;
+            font-size: 1rem;
+            padding-right: 6.5px;;
+            @include md{
+                font-size: 1.125rem;
+                line-height: 1.875rem;
+                padding-right: 6.67px;
+            }
             @include lg{
                 font-size: 2rem;
                 line-height: 3.375rem;
-                margin-right: 22px;
+                padding-right: 22px;;
             }
         }
-        .tel, .mail{
+        .footer-tel, .footer-mail{
+            font-size: 1rem;
+            line-height: 1.25rem;
+            @include md{
             font-size: 1.25rem;
             line-height: 1.875rem;
+            }
             @include lg{
                 font-size: 2.25rem;
                 line-height: 3.375rem;
@@ -153,7 +164,7 @@
 .footer-right{
     display: flex;
     .social-link{
-        margin: 0rem 0.75rem;
+        padding: 0rem 0.5rem;
         width: 1.5rem;
         @include lg{
         margin: 0px 1rem;
