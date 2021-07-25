@@ -136,7 +136,7 @@ nav {
       padding: 1.8rem 2.5rem; } }
   .header-wrap .logo {
     display: block;
-    background-image: url(/assets/images/main-logo.png);
+    background-image: url(../images/main-logo.png);
     width: 47px;
     height: 29.14px;
     background-size: contain;
@@ -396,7 +396,7 @@ nav {
     background: #fff; } }
 
 .banner {
-  background-image: url(/assets/images/banner.png);
+  background-image: url(../images/banner.png);
   height: 394px;
   width: 100%;
   background-position: center center;
@@ -640,10 +640,10 @@ nav {
       padding-left: 1.375rem; } }
 
 .classic-category:nth-child(1) .classic-category__img {
-  background-image: url(/assets/images/series-classic-1.png); }
+  background-image: url(../images/series-classic-1.png); }
 
 .classic-category:nth-child(2) .classic-category__img {
-  background-image: url(/assets/images/series-classic-2.png);
+  background-image: url(../images/series-classic-2.png);
   background-position: center -100px; }
 
 @media (min-width: 1140px) {
@@ -661,7 +661,7 @@ nav {
             transform: translateX(0%) translateY(-50%); } }
 
 .classic-category:nth-child(3) .classic-category__img {
-  background-image: url(/assets/images/series-classic-3.png);
+  background-image: url(../images/series-classic-3.png);
   background-position: center -80px; }
 
 .coDesign-collection {
@@ -748,10 +748,10 @@ nav {
           filter: opacity(80%); }
 
 .coDesign-category:nth-child(1) .coDesign__img:after {
-  background-image: url(/assets/images/series-co-design-1.png); }
+  background-image: url(../images/series-co-design-1.png); }
 
 .coDesign-category:nth-child(2) .coDesign__img:after {
-  background-image: url(/assets/images/series-co-design-2.png); }
+  background-image: url(../images/series-co-design-2.png); }
 
 .coDesign__title {
   z-index: 99;
