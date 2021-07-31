@@ -1,5 +1,5 @@
 //banner
-.banner{
+.index-banner{
     background-image: url(../images/banner.png);
     height: 394px;
     width: 100%;
@@ -8,12 +8,12 @@
         height: 840px;
     }
 }
-.banner__wrap{
+.index-banner__wrap{
     width: 100%;
     height: 100%;
     position: relative;
 }
-.banner__content{
+.index-banner__content{
     position: absolute;
     top: 50%;
     right: 0%;
@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    .banner__text{
+    .index-banner__text{
         color: $dark;
         font-weight: bold;
         font-size: 1rem;
@@ -35,7 +35,7 @@
             font-weight: normal;
         }
     }
-    .banner__title{
+    .index-banner__title{
         color: $dark;
         font-weight: bold;
         font-size: 2rem;
@@ -236,6 +236,13 @@
         background-image: url(../images/series-classic-3.png);
         background-position: center -80px;
     }
+}
+
+.hover-zoom{
+    transition: transform 1s;
+ &:hover{
+    transform: scale(1.1);
+ }
 }
 
 

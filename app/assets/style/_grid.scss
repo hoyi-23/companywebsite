@@ -1,10 +1,3 @@
-$primary: #AA0601;
-$secondary: #AA06010D;
-$dark: #650300;
-$gray: #212529;
-$light-gray: #707070;
-
-
 .container{
     max-width: 345px;
     margin: 0 auto;
@@ -26,9 +19,3 @@ $light-gray: #707070;
     }
 }
 
-.hover-zoom{
-    transition: transform 1s;
- &:hover{
-    transform: scale(1.1);
- }
-}

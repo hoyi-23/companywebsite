@@ -1,0 +1,39 @@
+.coming__soon{
+    padding: 5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include md{
+        padding: 9rem 0rem;
+    }
+    @include lg{
+        padding: 15rem 0rem;
+    }
+    .material-icons-outlined{
+        color: $primary;
+        font-weight: bold;
+        font-size: 5rem;
+        margin-bottom: 1rem;
+        @include md{
+            font-size: 8rem;
+            margin-bottom: 2rem;
+        }
+        @include lg{
+            font-size: 10rem;
+        }
+    }
+    h2{
+        color: $primary;
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+        font-weight: bold;
+        @include md{
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+        @include lg{
+            font-size: 4rem;
+            line-height: 5rem;
+        }
+    }
+}

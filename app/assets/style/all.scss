@@ -1,7 +1,15 @@
 @import "reset";
-@import "base";
+@import "base"; //全域相關
 @import "mixin"; //@mixin
-@import "utils"; //通用類別
-//@import "base"; //設定與body全域相關的
+@import "grid"; //格線
+@import "util";
 @import "layout";
 @import "index";
+@import "product";
+@import "faq";
+@import "location";
+@import "blog";
+
+
+//util 通用類別，通常為一行就完成。例如: mb-2 它的用處是像小積木一樣
+//helper 就是常用功能 像是 以圖代文字、做出三角形 等等的(跟mixin有點像)

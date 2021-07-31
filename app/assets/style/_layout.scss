@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0.625rem 0px;
+    padding-top: 0.625rem;
     @include lg{
     padding: 1.8rem 5.5rem;
     };
@@ -116,6 +116,7 @@
         position: relative;
         font-size: 1rem;
         line-height: 1.5rem;
+        color: #fff;
     }
 }
 .footer-left__contact{
@@ -150,6 +151,7 @@
         .footer-tel, .footer-mail{
             font-size: 1rem;
             line-height: 1.25rem;
+            color: #fff;
             @include md{
             font-size: 1.25rem;
             line-height: 1.875rem;
@@ -200,6 +202,7 @@
             font-size: 0.875rem;
             line-height: 1.25rem;
             padding: 0.5rem 0rem;
+            color: #fff;
             @include md{
             padding: 0rem 1.5rem;
             }
